@@ -1,0 +1,10 @@
+{% extends "tasks/layout.html" %}
+{% block body %}
+      <h1>Görev ekleyici</h1>
+      <form action="{% url 'add' %}" method="post">
+          {% csrf_token %}
+          {{ form_x }}
+        <input type="submit">
+      </form>
+<a href="{% url 'anasayfa' %}">Görevlerime dön</a>
+{% endblock %}
